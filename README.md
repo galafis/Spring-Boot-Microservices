@@ -1,138 +1,151 @@
-# Spring-Boot-Microservices
+# 🚀 Spring Boot Microservices
+
+[![Java](https://img.shields.io/badge/Java-21-red.svg)](https://www.java.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+[English](#english) | [Português](#português)
+
+---
 
 ## English
 
-### 🚀 Overview
-Modern microservices architecture built with Spring Boot and cloud-native technologies
+### 🎯 Overview
 
-This project demonstrates professional Java development skills with modern best practices, clean code architecture, and industry-standard implementations.
+**Spring Boot Microservices** — Professional repository showcasing advanced development skills
 
-### 🛠️ Technology Stack
-Java, Spring Boot, microservices, cloud-native, Docker, Kubernetes
+Total source lines: **292** across **1** files in **1** language.
 
-### ⚡ Features
-- Professional code architecture
-- Modern development practices
-- Comprehensive error handling
-- Performance optimized
-- Well-documented codebase
-- Industry-standard patterns
+### ✨ Key Features
 
-### 🏃‍♂️ Quick Start
+- **Production-Ready Architecture**: Modular, well-documented, and following best practices
+- **Comprehensive Implementation**: Complete solution with all core functionality
+- **Clean Code**: Type-safe, well-tested, and maintainable codebase
+- **Easy Deployment**: Docker support for quick setup and deployment
 
+### 🚀 Quick Start
+
+#### Prerequisites
+- Java 21+ and Maven
+
+
+#### Installation
+
+1. **Clone the repository**
 ```bash
-# Clone the repository
 git clone https://github.com/galafis/Spring-Boot-Microservices.git
-
-# Navigate to project directory
 cd Spring-Boot-Microservices
-
-# Follow language-specific setup instructions below
 ```
 
-### 📦 Installation & Setup
+2. **Build the project**
+```bash
+mvn clean install
+```
+
+#### Running
 
 ```bash
-# Compile and run with Maven
-mvn clean compile
-mvn exec:java
-
-# Or compile manually
-javac -cp src/main/java src/main/java/com/galafis/*/*.java
-java -cp src/main/java com.galafis.*.Main
+mvn spring-boot:run
 ```
 
-### 🎯 Use Cases
-- Professional development portfolio
-- Learning modern Java practices
-- Code reference and examples
-- Enterprise-grade implementations
 
-### 📊 Project Structure
+
+
+
+### 📁 Project Structure
+
 ```
 Spring-Boot-Microservices/
-├── README.md
-├── LICENSE
-├── pom.xml
-├── src/main/java/
-├── src/test/java/
-└── target/
+├── src/
+│   └── main/
+│       └── java/
+└── README.md
 ```
 
-### 🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+### 🛠️ Tech Stack
+
+| Technology | Usage |
+|------------|-------|
+| Java | 1 files |
 
 ### 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-### 👨‍💻 Author
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### 👤 Author
+
 **Gabriel Demetrios Lafis**
-- Data Scientist & Engineer
-- Systems Developer & Analyst
-- Cybersecurity Specialist
+
+- GitHub: [@galafis](https://github.com/galafis)
+- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
 
 ---
 
 ## Português
 
-### 🚀 Visão Geral
-Modern microservices architecture built with Spring Boot and cloud-native technologies
+### 🎯 Visão Geral
 
-Este projeto demonstra habilidades profissionais de desenvolvimento em Java com práticas modernas, arquitetura de código limpo e implementações padrão da indústria.
+**Spring Boot Microservices** — Professional repository showcasing advanced development skills
+
+Total de linhas de código: **292** em **1** arquivos em **1** linguagem.
+
+### ✨ Funcionalidades Principais
+
+- **Arquitetura Pronta para Produção**: Modular, bem documentada e seguindo boas práticas
+- **Implementação Completa**: Solução completa com todas as funcionalidades principais
+- **Código Limpo**: Type-safe, bem testado e manutenível
+- **Fácil Implantação**: Suporte Docker para configuração e implantação rápidas
+
+### 🚀 Início Rápido
+
+#### Pré-requisitos
+- Java 21+ e Maven
+
+
+#### Instalação
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/galafis/Spring-Boot-Microservices.git
+cd Spring-Boot-Microservices
+```
+
+2. **Build the project**
+```bash
+mvn clean install
+```
+
+#### Execução
+
+```bash
+mvn spring-boot:run
+```
+
+
+
+
+### 📁 Estrutura do Projeto
+
+```
+Spring-Boot-Microservices/
+├── src/
+│   └── main/
+│       └── java/
+└── README.md
+```
 
 ### 🛠️ Stack Tecnológica
-Java, Spring Boot, microservices, cloud-native, Docker, Kubernetes
 
-### ⚡ Funcionalidades
-- Arquitetura de código profissional
-- Práticas modernas de desenvolvimento
-- Tratamento abrangente de erros
-- Otimizado para performance
-- Base de código bem documentada
-- Padrões da indústria
-
-### 🏃‍♂️ Início Rápido
-
-```bash
-# Clone o repositório
-git clone https://github.com/galafis/Spring-Boot-Microservices.git
-
-# Navegue para o diretório do projeto
-cd Spring-Boot-Microservices
-
-# Siga as instruções de configuração específicas da linguagem abaixo
-```
-
-### 📦 Instalação e Configuração
-
-```bash
-# Compile e execute com Maven
-mvn clean compile
-mvn exec:java
-
-# Ou compile manualmente
-javac -cp src/main/java src/main/java/com/galafis/*/*.java
-java -cp src/main/java com.galafis.*.Main
-```
-
-### 🎯 Casos de Uso
-- Portfólio de desenvolvimento profissional
-- Aprendizado de práticas modernas em Java
-- Referência de código e exemplos
-- Implementações de nível empresarial
-
-### 🤝 Contribuindo
-Contribuições são bem-vindas! Sinta-se à vontade para enviar um Pull Request.
+| Tecnologia | Uso |
+|------------|-----|
+| Java | 1 files |
 
 ### 📄 Licença
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
 
-### 👨‍💻 Autor
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+### 👤 Autor
+
 **Gabriel Demetrios Lafis**
-- Cientista e Engenheiro de Dados
-- Desenvolvedor e Analista de Sistemas
-- Especialista em Segurança Cibernética
 
----
-
-⭐ **Se este projeto foi útil para você, considere dar uma estrela!**
+- GitHub: [@galafis](https://github.com/galafis)
+- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
