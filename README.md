@@ -1,212 +1,100 @@
-# 🚀 Spring Boot Microservices
+# Spring Boot Microservices
 
-> Professional repository showcasing advanced development skills
+[English](#english) | [Portugues](#portugues)
 
-[![Java](https://img.shields.io/badge/Java-21-ED8B00.svg)](https://img.shields.io/badge/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+---
 
-[English](#english) | [Português](#português)
+## Portugues
+
+Plataforma de microsservicos em Java implementando padroes enterprise: API Gateway com rate limiting, Service Registry, Circuit Breaker, Load Balancing (Round Robin) e monitoramento de saude dos servicos.
+
+### Arquitetura
+
+```mermaid
+graph TD
+    Client[Cliente] --> GW[API Gateway]
+    GW --> RL[Rate Limiter]
+    GW --> CB[Circuit Breaker]
+    GW --> LB[Load Balancer]
+    LB --> SR[Service Registry]
+    SR --> US1[User Service :8081]
+    SR --> US2[User Service :8082]
+    SR --> OS1[Order Service :8091]
+    SR --> OS2[Order Service :8092]
+    SR --> PS[Payment Service :8101]
+    SR --> NS[Notification Service :8111]
+    HM[Health Monitor] --> SR
+```
+
+### Funcionalidades
+
+- API Gateway com roteamento dinamico e rate limiting (Token Bucket)
+- Service Registry para descoberta automatica de servicos
+- Circuit Breaker com estados CLOSED, OPEN e HALF_OPEN
+- Load Balancer Round Robin com verificacao de saude
+- Health Monitor para monitoramento de instancias
+- Suporte a multiplas instancias por servico
+
+### Tecnologias
+
+| Tecnologia | Finalidade |
+|---|---|
+| Java 11+ | Linguagem principal |
+| Maven | Gerenciamento de dependencias |
+| ConcurrentHashMap | Registro thread-safe |
+| Design Patterns | Gateway, Circuit Breaker, Registry |
+
+### Como Executar
+
+```bash
+mvn compile
+mvn exec:java -Dexec.mainClass="com.galafis.microservices.MicroservicesPlatform"
+```
 
 ---
 
 ## English
 
-### 🎯 Overview
+Java microservices platform implementing enterprise patterns: API Gateway with rate limiting, Service Registry, Circuit Breaker, Load Balancing (Round Robin), and service health monitoring.
 
-**Spring Boot Microservices** is a production-grade Java application that showcases modern software engineering practices including clean architecture, comprehensive testing, containerized deployment, and CI/CD readiness.
-
-The codebase comprises **292 lines** of source code organized across **1 modules**, following industry best practices for maintainability, scalability, and code quality.
-
-### ✨ Key Features
-
-- **📐 Clean Architecture**: Modular design with clear separation of concerns
-- **🧪 Test Coverage**: Unit and integration tests for reliability
-- **📚 Documentation**: Comprehensive inline documentation and examples
-- **🔧 Configuration**: Environment-based configuration management
-
-### 🏗️ Architecture
+### Architecture
 
 ```mermaid
-graph TB
-    subgraph Core["🏗️ Core"]
-        A[Main Module]
-        B[Business Logic]
-        C[Data Processing]
-    end
-    
-    subgraph Support["🔧 Support"]
-        D[Configuration]
-        E[Utilities]
-        F[Tests]
-    end
-    
-    A --> B --> C
-    D --> A
-    E --> B
-    F -.-> B
-    
-    style Core fill:#e1f5fe
-    style Support fill:#f3e5f5
+graph TD
+    Client[Client] --> GW[API Gateway]
+    GW --> RL[Rate Limiter]
+    GW --> CB[Circuit Breaker]
+    GW --> LB[Load Balancer]
+    LB --> SR[Service Registry]
+    SR --> US1[User Service :8081]
+    SR --> US2[User Service :8082]
+    SR --> OS1[Order Service :8091]
+    SR --> OS2[Order Service :8092]
+    SR --> PS[Payment Service :8101]
+    SR --> NS[Notification Service :8111]
+    HM[Health Monitor] --> SR
 ```
 
-### 🚀 Quick Start
+### Features
 
-#### Prerequisites
+- API Gateway with dynamic routing and rate limiting (Token Bucket)
+- Service Registry for automatic service discovery
+- Circuit Breaker with CLOSED, OPEN, and HALF_OPEN states
+- Round Robin Load Balancer with health checking
+- Health Monitor for instance monitoring
+- Multi-instance support per service
 
-- Java 21+ (JDK)
-- Maven 3.9+
-
-#### Installation
+### How to Run
 
 ```bash
-# Clone the repository
-git clone https://github.com/galafis/Spring-Boot-Microservices.git
-cd Spring-Boot-Microservices
-
-# Build the project
-mvn clean install
+mvn compile
+mvn exec:java -Dexec.mainClass="com.galafis.microservices.MicroservicesPlatform"
 ```
 
-#### Running
+## Author
 
-```bash
-mvn spring-boot:run
-```
+Gabriel Demetrios Lafis
 
-### 📁 Project Structure
+## License
 
-```
-Spring-Boot-Microservices/
-├── src/          # Source code
-│   ├── main/
-│   │   └── java/
-│   └── test/         # Test suite
-│       └── java/
-├── LICENSE
-└── README.md
-```
-
-### 🛠️ Tech Stack
-
-| Technology | Description | Role |
-|------------|-------------|------|
-| **Java** | Core Language | Primary |
-
-### 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### 👤 Author
-
-**Gabriel Demetrios Lafis**
-- GitHub: [@galafis](https://github.com/galafis)
-- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
-
----
-
-## Português
-
-### 🎯 Visão Geral
-
-**Spring Boot Microservices** é uma aplicação Java de nível profissional que demonstra práticas modernas de engenharia de software, incluindo arquitetura limpa, testes abrangentes, implantação containerizada e prontidão para CI/CD.
-
-A base de código compreende **292 linhas** de código-fonte organizadas em **1 módulos**, seguindo as melhores práticas do setor para manutenibilidade, escalabilidade e qualidade de código.
-
-### ✨ Funcionalidades Principais
-
-- **📐 Clean Architecture**: Modular design with clear separation of concerns
-- **🧪 Test Coverage**: Unit and integration tests for reliability
-- **📚 Documentation**: Comprehensive inline documentation and examples
-- **🔧 Configuration**: Environment-based configuration management
-
-### 🏗️ Arquitetura
-
-```mermaid
-graph TB
-    subgraph Core["🏗️ Core"]
-        A[Main Module]
-        B[Business Logic]
-        C[Data Processing]
-    end
-    
-    subgraph Support["🔧 Support"]
-        D[Configuration]
-        E[Utilities]
-        F[Tests]
-    end
-    
-    A --> B --> C
-    D --> A
-    E --> B
-    F -.-> B
-    
-    style Core fill:#e1f5fe
-    style Support fill:#f3e5f5
-```
-
-### 🚀 Início Rápido
-
-#### Prerequisites
-
-- Java 21+ (JDK)
-- Maven 3.9+
-
-#### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/galafis/Spring-Boot-Microservices.git
-cd Spring-Boot-Microservices
-
-# Build the project
-mvn clean install
-```
-
-#### Running
-
-```bash
-mvn spring-boot:run
-```
-
-### 📁 Estrutura do Projeto
-
-```
-Spring-Boot-Microservices/
-├── src/          # Source code
-│   ├── main/
-│   │   └── java/
-│   └── test/         # Test suite
-│       └── java/
-├── LICENSE
-└── README.md
-```
-
-### 🛠️ Stack Tecnológica
-
-| Tecnologia | Descrição | Papel |
-|------------|-----------|-------|
-| **Java** | Core Language | Primary |
-
-### 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para enviar um Pull Request.
-
-### 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-### 👤 Autor
-
-**Gabriel Demetrios Lafis**
-- GitHub: [@galafis](https://github.com/galafis)
-- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
+MIT License
